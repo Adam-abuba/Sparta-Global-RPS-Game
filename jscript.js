@@ -17,7 +17,7 @@ var decision2 = decision(userChoice,pcChoice2);
 currentScore();
 }
 
-  finalScore(usertotal,pctotal);
+  finalScore(userScore,pcScore);
 // ------------------------------------------------------------------
 function pcSelect(){
   var pcChoice = Math.random();
