@@ -1,28 +1,22 @@
+var pcScore = 0;
+
+var userScore = 0;
 for (var i = 0; i < 5; i++) {
 alert("This is round " + (i+1) + " of 5");
 
 var userChoice = prompt("Select your choice of(R)ock, (P)aper or (S)cissors");
 //Making the Score Counter
-var pcScore = 0;
 
-var userScore = 0;
-
-// var pctotal = pcScore();
-// var usertotal = userScore();
-
+// debugger;
 //Making the Pc selcetion a string
 var pcChoice = pcSelect();
 var pcChoice2 = pcChoice();
 
 var decision2 = decision(userChoice,pcChoice2);
-// if (decision2 == "You win this round!"){
-//   userScore();
-// } else if (decision2 == "You lose this round.") {
-//   pcScore();
-// }
+
 currentScore();
 }
-pcScore();
+
   finalScore(usertotal,pctotal);
 // ------------------------------------------------------------------
 function pcSelect(){
@@ -56,7 +50,7 @@ function pcSelect(){
       var outcome = "You win this round!"
       alert(outcome);
       userScore++;
-      // return outcome;
+
       }
 
 
@@ -64,7 +58,7 @@ function pcSelect(){
       var outcome = "You lose this round."
       alert(outcome);
       pcScore++;
-      // return outcome;
+
 
 
     }
@@ -73,14 +67,14 @@ function pcSelect(){
         var outcome = "You win this round!"
         alert(outcome);
         userScore++;
-        // return outcome;
+
 
     }
     if (choice1 == "P" && choice2 == "Scissors") {
       var outcome = "You lose this round."
       alert(outcome);
       pcScore++;
-      // return outcome;
+
 
     }
 // You pick Scissors
@@ -88,14 +82,14 @@ function pcSelect(){
       var outcome = "You win this round!"
       alert(outcome);
       userScore++;
-      // return outcome;
+
 
     }
       if (choice1 == "S" && choice2 == "Rock") {
       var outcome = "You lose this round."
       alert(outcome);
       pcScore++;
-      // return outcome;
+
 
 
     }
@@ -115,6 +109,8 @@ function pcSelect(){
 
 console.log("The Computer score is " + pcScore);
 console.log("The user score is " + userScore);
+
+
 function currentScore (){
   alert ("The current score now is " + userScore + " to you and " + pcScore + " to the computer.");
 }
