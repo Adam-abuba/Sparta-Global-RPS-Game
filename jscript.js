@@ -5,7 +5,7 @@ var userChoice = prompt("Select your choice of(R)ock, (P)aper or (S)cissors");
 //Making the Score Counter
 var pcScore = createCounter();
 var userScore = createCounter();
-userScore();
+
 var pctotal = pcScore();
 var usertotal = userScore();
 
@@ -13,9 +13,15 @@ var usertotal = userScore();
 var pcChoice = pcSelect();
 var pcChoice2 = pcChoice();
 
-decision(userChoice,pcChoice2);
+var decision2 = decision(userChoice,pcChoice2);
+if (decision2 == "You win this round!"){
+  userScore();
+} else if (decision2 == "You lose this round.") {
+  pcScore();
+}
 currentScore();
 }
+pcScore();
   finalScore(usertotal,pctotal);
 // ------------------------------------------------------------------
 function pcSelect(){
@@ -46,47 +52,50 @@ function pcSelect(){
   function decision(choice1, choice2){
   // You pick Rock
     if (choice1 == "R" && choice2 == "Scissors") {
-      alert("You win this round!");
-      return function() {
-      userScore;
-      }
+      var outcome = "You win this round!"
+      alert(outcome);
+
+      // return outcome;
+      
 
     }
     if (choice1 == "R" && choice2 == "Paper") {
-      alert("You lose this round.");
-      return function () {
-      pcScore;
-      }
+      var outcome = "You lose this round."
+      alert(outcome);
+
+      // return outcome;
+
 
     }
     // You pick paper
       if (choice1 == "P" && choice2 == "Rock") {
-      alert("You win this round!");
-      return function () {
-      userScore;
-      }
+        var outcome = "You win this round!"
+        alert(outcome);
+
+        // return outcome;
 
     }
     if (choice1 == "P" && choice2 == "Scissors") {
-      alert("You lose this round.");
-      return function () {
-      pcScore;
-      }
+      var outcome = "You lose this round."
+      alert(outcome);
+
+      // return outcome;
 
     }
     // You pick Scissors
     if (choice1 == "S" && choice2 == "Paper") {
-      alert("You win this round!");
-      return function () {
-      userScore;
-      }
+      var outcome = "You win this round!"
+      alert(outcome);
+
+      // return outcome;
 
     }
       if (choice1 == "S" && choice2 == "Rock") {
-      alert("You lose this round.");
-      return function () {
-      pcScore;  
-      }
+      var outcome = "You lose this round."
+      alert(outcome);
+
+      // return outcome;
+
 
     }
     // Tie
@@ -110,9 +119,10 @@ function pcSelect(){
   }
 
 
-console.log(pctotal);
+console.log("The Computer score is " + pctotal);
+console.log("The user score is " + usertotal);
 function currentScore (){
-  alert ("The current now is " + usertotal + " to you and " + pctotal + " to the computer.");
+  alert ("The current score now is " + usertotal + " to you and " + pctotal + " to the computer.");
 }
 
  function finalScore (usertotal,pctotal){
